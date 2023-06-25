@@ -1,8 +1,7 @@
 .App{
     width: 500px;
     padding: 30px;
-   
-
+    margin: 0 auto;
 }
 .heroTitle{
   font-size: 30px;
