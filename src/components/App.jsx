@@ -3,6 +3,7 @@ import shortid from 'shortid';
 import ContactForm from './ContactForm';
 import Filter  from './Filter';
 import ContactList from './ContactList';
+import css from './App.module.css'
 
 
 class App extends Component {
@@ -55,10 +56,10 @@ class App extends Component {
     const {filter} = this.state
 
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <div className={css.App}>
+        <h1 className={css.heroTitle}>Phonebook</h1>
         <ContactForm onSubmitProps={this.onAddContact} />
-        <h2>Contacts</h2>
+        <h2 className={css.title}>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter}/>
         <ContactList contacts={visibleContacts} onDeleteContact={this.onRemoveContact}/> 
       </div>
